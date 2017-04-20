@@ -15,11 +15,11 @@ class Fixnum
     else
       number_of_coins.push(0)
     end
-    if change.%(5) == 0 #nickels code
-
-      number_of_coins.push(change/5)
+    if change.>=(5) #nickels code
+      number_of_coins.push((change-change.%(5))/5)
+      change = change.-(change-change.%(5))
     else
-      number_of_coins.push(0)
+      number_of_coins.push(0) # nickels placeholder
     end
       number_of_coins.push(change) #number of pennies remaining
 
