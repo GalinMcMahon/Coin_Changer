@@ -1,24 +1,27 @@
-# Title Case
+# Coin Combinations
 
-#### Epicodus exercise to return a capitalized sentence, 04/19/17
+#### Exercise to return coin change, 04/20/17
 
-#### By Mohamed Warsame and Galin McMahon
+#### By Aubrey Masten and Galin McMahon
 
 ## Description
 
-Program will return a capitalized sentence to user
+Program will return coin change combinations giving the smallest coin quantity possible
 
 ## Specifications
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-| Receive a string of words | hello world | hello world |
-| Convert the string of words to capitalized words | hello world | Hello World |
+| Receive a string number and output number of pennies | "99" | "99" |
+| Receive a string number and output number of nickels | "20" | "4" |
+| Receive a string number and output number of dimes | "20" | "2" |
+| Receive a string number and output number of quarters | "50" | "2" |
+| Add non-even division |
 
 ## Setup/Installation Requirements
 
-* Clone the title_case folder
-* Open the index.erb file and enter string
+* Clone the coins folder
+* Open the index.erb file and enter number
 
 ## Known Bugs
 
@@ -36,4 +39,4 @@ Ruby
 
 MIT
 
-Copyright (c) 2017 **_{Mohamed Warsame, Galin McMahon}_**
+Copyright (c) 2017 **_{Aubrey Masten, Galin McMahon}_**
