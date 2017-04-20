@@ -7,7 +7,11 @@ describe('Fixnum#coins') do
   end
 
   it("returns the number of nickels equal to user input if user input is evenly divisible into nickels") do
-    expect((20).coins()).to(eq(4))
+    expect((15).coins()).to(eq(3))
+  end
+
+  it("returns the number of dimes equal to user input if user input is evenly divisible into dimes") do
+    expect((20).coins()).to(eq(2))
   end
 
 
