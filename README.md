@@ -12,11 +12,11 @@ Program will return coin change combinations giving the smallest coin quantity p
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-| Receive a string number and output number of pennies | "99" | "99" |
+| Receive a string number and output number of pennies | "4" | "4" |
 | Receive a string number and output number of nickels | "20" | "4" |
 | Receive a string number and output number of dimes | "20" | "2" |
 | Receive a string number and output number of quarters | "50" | "2" |
-| Add non-even division |
+| Return number of quarters and remainder in pennies | "87" | 3 quarters and 12 pennies |
 
 ## Setup/Installation Requirements
 
