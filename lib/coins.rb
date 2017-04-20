@@ -6,12 +6,22 @@ class Fixnum
     if change.>=(25) #quarters code
       number_of_coins.push((change-change.%(25))/25)
       change = change.-(change-change.%(25))
-    elsif change.%(10) == 0 #dimes code
-      number_of_coins.push(change/10)
-    elsif change.%(5) == 0 #nickels code
-      number_of_coins.push(change/5)
+    else
+      number_of_coins.push(0)
     end
-      number_of_coins.push(change)
+    if change.>=(10) #dimes code
+      number_of_coins.push((change-change.%(10))/10)
+      change = change.-(change-change.%(10))
+    else
+      number_of_coins.push(0)
+    end
+    if change.%(5) == 0 #nickels code
+
+      number_of_coins.push(change/5)
+    else
+      number_of_coins.push(0)
+    end
+      number_of_coins.push(change) #number of pennies remaining
 
 
   number_of_coins
