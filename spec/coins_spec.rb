@@ -8,6 +8,17 @@ describe('Fixnum#coins') do
 
   it("returns the number of nickels equal to user input if user input is evenly divisible into nickels") do
     expect((5).coins()).to(eq([[0, 0, 1, 0],[false, false, false]]))
+                            # output = [[0, 0, 1, 0],[false, false, false]]
+                            # output[0] = [0, 9, 1, 0]
+                            # output[0][0] = 0
+                            # output[0][1] = 9
+                            # output[0][2] = 1
+                            # output[0][3] = 0
+                            # output[1] = [false, false, false]
+                            # output[1][0] = false
+                            # output[1][1] = false
+                            # output[1][2] = true
+
   end
 
   it("returns the number of dimes equal to user input if user input is evenly divisible into dimes") do

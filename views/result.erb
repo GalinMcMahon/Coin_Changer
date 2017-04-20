@@ -1,0 +1,22 @@
+<h1>Your Change:</h1>
+<!-- # @title is pulling from app.rb -->
+<!-- the (() ? :) is using the ternary operator. it is a compact if else statement -->
+<h2>
+  <%=
+    ((@output[1] == [false, false, false]) ? "" : "We ran out of " ) +
+    (@output[1][0] ? "quarters" : "" ) +
+    ((@output[1][0] && @output[1][1]) ? " and " : "") +
+    ((@output[1][1] == true) ? "dimes" : "" ) +
+    ((@output[1][1] && @output[1][2]) ? " and " : "") +
+    ((@output[1][2] == true) ? " nickels" : "" ) +
+    ((@output[1] == [false, false, false]) ? "" : ".")
+    %>
+</h2>
+<h2>
+  <%=
+    ((@output[0][0] != 0) ? ("Quarters: " + @output[0][0].to_s) : "" ) +
+    ((@output[0][1] != 0) ? (" Dimes: " + @output[0][1].to_s) : "" )+
+    ((@output[0][2] != 0) ? (" Nickels: " + @output[0][2].to_s) : "" ) +
+    ((@output[0][3] != 0) ? (" Pennies: " + @output[0][3].to_s) : "" )
+   %>.
+</h2>
