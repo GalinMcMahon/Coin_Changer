@@ -1,8 +1,5 @@
 class Fixnum
   define_method(:coins) do
-    change = self
-    number_of_coins = [] #final number of coins
-
     # if change.>=(25) #quarters code
     #   number_of_coins.push((change-change.%(25))/25)
     #   change = change.-(change-change.%(25))
@@ -21,18 +18,28 @@ class Fixnum
     # else
     #   number_of_coins.push(0) # nickels placeholder
     # end
+    pennies = self
+    final_coins_array = [] #final number of coins
 
-    coins = [25,10,5]
-    coins.each() do |coin|
-      # if change.>=(coin)
-        number_of_coins.push((change-change.%(coin))/coin)
-        change = change.-(change-change.%(coin))
-      # else
-        # number_of_coins.push(0) # nickels placeholder
-      # end
+    #available - quarters: 78 dimes: 13 nickels: 100
+    available_coins = [78,13,100]
+
+    coin_values = [25,10,5]
+    coin_values.each_with_index() do |coin_value, index|
+      total_necessary_pennies = pennies-pennies.%(coin_value)
+      total_necessary_coins = total_necessary_pennies/coin_value
+
+      if total_necessary_coins.<=(available_coins[index])
+        final_coins_array.push(total_necessary_coins)
+        pennies = pennies.-(total_necessary_pennies)
+      else
+        final_coins_array.push(available_coins[index]) # takes all avaible quarters out, passes rem pennies
+        pennies = pennies.-((coin_value).*(available_coins[index])) # takes away available quarter total from the needed coin amt, passes running total back to self
+      end
+
     end
-    number_of_coins.push(change) #number of pennies remaining
+    final_coins_array.push(pennies) #number of pennies remaining
 
-    number_of_coins
+    final_coins_array
   end
 end

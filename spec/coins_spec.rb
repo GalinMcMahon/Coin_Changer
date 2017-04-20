@@ -29,4 +29,8 @@ describe('Fixnum#coins') do
   it("returns the number of nickels and pennies equal to user input if user input is not evenly divisible into dimes") do
     expect((6).coins()).to(eq([0, 0, 1, 1]))
   end
+
+  it("returns the number of coins equal to user input if user input exceeds number of maximum available quarters, nickels or dimes.  The system will distribute excess cents.") do
+    expect((2500).coins()).to(eq([78, 13, 84, 0]))
+  end
 end
