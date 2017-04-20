@@ -6,9 +6,9 @@ describe('Fixnum#coins') do
     expect((99).coins()).to(eq(99))
   end
 
-  # it("capitalizes multiple word titles") do
-  #   expect(("beowulf begins").title_case()).to(eq("Beowulf Begins"))
-  # end
+  it("returns the number of nickels equal to user input if user input is evenly divisible into nickels") do
+    expect((20).coins()).to(eq(4))
+  end
 
 
 end
