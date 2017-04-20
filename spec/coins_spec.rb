@@ -26,5 +26,7 @@ describe('Fixnum#coins') do
     expect((11).coins()).to(eq([0, 1, 0, 1]))
   end
 
-
+  it("returns the number of nickels and pennies equal to user input if user input is not evenly divisible into dimes") do
+    expect((6).coins()).to(eq([0, 0, 1, 1]))
+  end
 end
