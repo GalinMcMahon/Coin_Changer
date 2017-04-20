@@ -1,6 +1,6 @@
 require('capybara/rspec') #Installs integration testing
 require('./app')
-require('pry')
+# require('pry')
 Capybara.app = Sinatra::Application # Allow integration testing to process
 set(:show_exceptions, false)
 
