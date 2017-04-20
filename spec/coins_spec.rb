@@ -14,5 +14,9 @@ describe('Fixnum#coins') do
     expect((20).coins()).to(eq(2))
   end
 
+  it("returns the number of quarters equal to user input if user input is evenly divisible into quarters") do
+    expect((75).coins()).to(eq(3))
+  end
+
 
 end
